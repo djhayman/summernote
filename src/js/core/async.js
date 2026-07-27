@@ -31,7 +31,7 @@ export function readFileAsDataURL(file) {
  * @return {Promise} - then: $image
  */
 export function createImage(url) {
-  return new Promise((deferred) => {
+  return new Promise((resolve, reject) => {
     const $img = $('<img>');
 
     $img.one('load', () => {
